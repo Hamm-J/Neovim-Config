@@ -81,6 +81,13 @@ return packer.startup(function(use)
 	-- bufferline
 	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
+	-- debugger
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("theHamsta/nvim-dap-virtual-text") -- show debug values next to line in code
+	use("leoluz/nvim-dap-go") -- golang
+	use("mfussenegger/nvim-dap-python") -- python
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
