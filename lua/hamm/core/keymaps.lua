@@ -25,6 +25,7 @@ keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- navigate tabs
 keymap.set("n", "<Tab>", ":bnext<CR>")
 keymap.set("n", "<S-Tab>", ":bprevious<CR>")
+keymap.set("n", "<leader>sn", "<C-w>T")
 
 -- *** file explorer ***
 -- plugin: nvim-tree
@@ -40,3 +41,17 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- *** clipboard ***
 keymap.set("n", "x", '"_x') -- prevent x from filling up yank buffer
+
+-- *** debugger ***
+-- plugin: nvim-dap
+keymap.set("n", "<F8>", ":lua require'dap'.continue()<CR>")
+keymap.set("n", "<F10>", ":lua require'dap'.step_over()<CR>")
+keymap.set("n", "<F11>", ":lua require'dap'.step_into()<CR>")
+keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
+keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
+
+-- plugin: nvim-dap-ui
+keymap.set("n", "<leader>db", ':lua require("dapui").toggle()<CR>')
