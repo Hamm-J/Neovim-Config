@@ -17,6 +17,14 @@ nvimtree.setup({
 				},
 			},
 		},
+		highlight_git = true,
+	},
+	icons = {
+		webdev_colors = false,
+	},
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
 	},
 	actions = {
 		open_file = {
@@ -27,5 +35,8 @@ nvimtree.setup({
 	},
 	view = {
 		relativenumber = true,
+	},
+	git = {
+		ignore = false,
 	},
 })
