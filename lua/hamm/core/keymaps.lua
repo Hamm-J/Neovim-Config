@@ -55,3 +55,12 @@ keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 
 -- plugin: nvim-dap-ui
 keymap.set("n", "<leader>db", ':lua require("dapui").toggle()<CR>')
+
+-- *** git ***
+-- plugin: gitsigns
+keymap.set("n", "<leader>ga", ":Gitsigns toggle_deleted<CR>")
+keymap.set("n", "<leader>gs", ":Gitsigns diffthis<CR>")
+keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
+keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
+
+-- plugin: vim-fugitive
