@@ -21,3 +21,4 @@ require("hamm.plugins.dap.nvim-dap-python")
 -- execute last
 require("hamm.plugins.nvim-transparent")
 require("hamm.core.colors")
+require("hamm.plugins.nvim-colorizer")

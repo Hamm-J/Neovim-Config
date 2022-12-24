@@ -93,6 +93,9 @@ return packer.startup(function(use)
 	use("leoluz/nvim-dap-go") -- golang
 	use("mfussenegger/nvim-dap-python") -- python
 
+	-- color value
+	use("norcalli/nvim-colorizer.lua")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
