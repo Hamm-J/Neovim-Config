@@ -28,13 +28,24 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim") -- package manager
 	use("nvim-lua/plenary.nvim") -- lua functions that many other plugins use
 
-	--use("ntk148v/vim-horizon") -- colorscheme
+	-- colorscheme
+	--use("ntk148v/vim-horizon")
 	use("lunarvim/horizon.nvim")
+
+	-- transparent background
+	use("xiyaowong/nvim-transparent")
+
+	-- quality of life
 	use("szw/vim-maximizer") -- maximizes and restores current window dimensions
 	use("numToStr/Comment.nvim") -- commenting gc
-	use("nvim-tree/nvim-tree.lua") -- file explorer
 	use("kyazdani42/nvim-web-devicons") -- file explorer icons
-	use("nvim-lualine/lualine.nvim") -- status bar
+
+	-- explorer
+	use("nvim-tree/nvim-tree.lua") -- file explorer
+
+	-- status bar and tabline/winbar
+	use("nvim-lualine/lualine.nvim")
+	--use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
 	-- fuzzy search
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
@@ -72,14 +83,8 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- git integration
+	-- git
 	use("lewis6991/gitsigns.nvim")
-
-	-- transparent background
-	use("xiyaowong/nvim-transparent")
-
-	-- bufferline
-	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
 	-- debugger
 	use("mfussenegger/nvim-dap")
