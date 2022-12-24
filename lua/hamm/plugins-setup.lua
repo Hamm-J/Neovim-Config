@@ -84,7 +84,8 @@ return packer.startup(function(use)
 	})
 
 	-- git
-	use("lewis6991/gitsigns.nvim")
+	use("lewis6991/gitsigns.nvim") -- no lua
+	use("tpope/vim-fugitive")
 
 	-- debugger
 	use("mfussenegger/nvim-dap")
