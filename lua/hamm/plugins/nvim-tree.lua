@@ -19,9 +19,6 @@ nvimtree.setup({
 		},
 		highlight_git = true,
 	},
-	icons = {
-		webdev_colors = false,
-	},
 	update_focused_file = {
 		enable = true,
 		update_cwd = true,

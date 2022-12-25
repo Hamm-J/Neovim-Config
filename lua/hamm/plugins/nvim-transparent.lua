@@ -7,6 +7,7 @@ transparent.setup({
 	enable = true,
 	extra_groups = {
 		"Pmenu", -- popup menu
+		"NormalFloat",
 		"MsgArea", -- commandline background
 
 		-- plugin: lualine
@@ -82,8 +83,16 @@ transparent.setup({
 		--"BufferInactiveMod",
 		--"BufferVisibleMod",
 		--"BufferTabpages",
+
+		-- plugin: lspsaga
+		"LspSagaFinderSelection",
+		"DefinitionFile",
 	},
 })
+
+-- manually change background color of float window because transparent plugin
+-- is not working for some reason
+vim.cmd([[ hi FloatBorder guibg=NONE ctermbg=NONE ]])
 
 -- plugin: barbar
 -- manually change the background color of barbar because the transparent
