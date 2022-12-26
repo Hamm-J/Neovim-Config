@@ -93,6 +93,7 @@ return packer.startup(function(use)
 	use("theHamsta/nvim-dap-virtual-text") -- show debug values next to line in code
 	use("leoluz/nvim-dap-go") -- golang
 	use("mfussenegger/nvim-dap-python") -- python
+	use({ "crusj/hierarchy-tree-go.nvim", requires = "neovim/nvim-lspconfig" }) -- golang call stack
 
 	-- color value
 	use("norcalli/nvim-colorizer.lua")

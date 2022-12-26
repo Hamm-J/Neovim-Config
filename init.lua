@@ -18,6 +18,7 @@ require("hamm.plugins.dap.nvim-dap-ui")
 require("hamm.plugins.dap.nvim-dap-virtual-text")
 require("hamm.plugins.dap.nvim-dap-go")
 require("hamm.plugins.dap.nvim-dap-python")
+require("hamm.plugins.dap.nvim-dap-virtual-text")
 -- execute last
 require("hamm.plugins.nvim-transparent")
 require("hamm.core.colors")
