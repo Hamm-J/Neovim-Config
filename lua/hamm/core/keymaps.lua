@@ -45,6 +45,7 @@ keymap.set("n", "x", '"_x') -- prevent x from filling up yank buffer
 
 -- *** debugger ***
 -- plugin: nvim-dap
+keymap.set("n", "<F1>", ":lua require'dap'.terminate()<CR>")
 keymap.set("n", "<F8>", ":lua require'dap'.continue()<CR>")
 keymap.set("n", "<F10>", ":lua require'dap'.step_over()<CR>")
 keymap.set("n", "<F11>", ":lua require'dap'.step_into()<CR>")
