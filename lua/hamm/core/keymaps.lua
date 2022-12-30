@@ -58,6 +58,9 @@ keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 -- plugin: nvim-dap-ui
 keymap.set("n", "<leader>db", ':lua require("dapui").toggle()<CR>')
 
+-- *** lsp ***
+keymap.set("n", "<leader>da", ":Telescope diagnostics<CR>")
+
 -- *** git ***
 -- plugin: gitsigns
 keymap.set("n", "<leader>ga", ":Gitsigns toggle_deleted<CR>")
