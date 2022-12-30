@@ -39,6 +39,7 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer") -- maximizes and restores current window dimensions
 	use("numToStr/Comment.nvim") -- commenting gc
 	use("kyazdani42/nvim-web-devicons") -- file explorer icons
+	use("norcalli/nvim-colorizer.lua") -- show color for color values
 
 	-- explorer
 	use("nvim-tree/nvim-tree.lua") -- file explorer
@@ -94,9 +95,6 @@ return packer.startup(function(use)
 	use("theHamsta/nvim-dap-virtual-text") -- show debug values next to line in code
 	use("leoluz/nvim-dap-go") -- golang
 	use("mfussenegger/nvim-dap-python") -- python
-
-	-- color value
-	use("norcalli/nvim-colorizer.lua")
 
 	if packer_bootstrap then
 		require("packer").sync()
