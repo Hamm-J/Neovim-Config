@@ -8,6 +8,8 @@ local lualine_horizon = require("lualine.themes.horizon")
 lualine.setup({
 	options = {
 		theme = lualine_horizon,
+		component_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 	},
 	sections = {
 		lualine_a = { "mode" },
