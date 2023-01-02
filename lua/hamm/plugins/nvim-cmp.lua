@@ -39,6 +39,7 @@ cmp.setup({
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
 		{ name = "nvim_lua" }, -- neovim lua API
+		{ name = "vim-dadbod-completion" }, -- sql
 	}),
 	formatting = {
 		format = lspkind.cmp_format({
