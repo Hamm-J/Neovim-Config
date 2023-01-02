@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-nvim-lua")
 	use("kristijanhusak/vim-dadbod-completion")
+	use("kristijanhusak/vim-dadbod-ui") -- sql database ui
 
 	-- snippets
 	use("L3MON4D3/LuaSnip")
