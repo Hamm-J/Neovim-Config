@@ -69,3 +69,6 @@ keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
 keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
 
 -- plugin: vim-fugitive
+
+-- *** undotree ***
+keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
