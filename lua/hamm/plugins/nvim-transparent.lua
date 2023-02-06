@@ -4,7 +4,7 @@ if not status then
 end
 
 transparent.setup({
-	enable = false,
+	enable = true,
 	extra_groups = {
 		"Pmenu", -- popup menu
 		"NormalFloat",
