@@ -4,7 +4,7 @@ if not status then
 end
 
 transparent.setup({
-	enable = true,
+	enable = false,
 	extra_groups = {
 		"Pmenu", -- popup menu
 		"NormalFloat",
@@ -92,7 +92,7 @@ transparent.setup({
 
 -- manually change background color of float window because transparent plugin
 -- is not working for some reason
-vim.cmd([[ hi FloatBorder guibg=NONE ctermbg=NONE ]])
+-- vim.cmd([[ hi FloatBorder guibg=NONE ctermbg=NONE ]])
 
 -- plugin: barbar
 -- manually change the background color of barbar because the transparent

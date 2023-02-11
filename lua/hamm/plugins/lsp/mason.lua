@@ -20,7 +20,6 @@ mason_lspconfig.setup({
 		"cssls",
 		"dockerls",
 		"gopls",
-		"html",
 		"tsserver",
 		"sumneko_lua",
 		"pyright",
