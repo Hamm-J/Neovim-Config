@@ -21,7 +21,7 @@ mason_lspconfig.setup({
 		"dockerls",
 		"gopls",
 		"tsserver",
-		"sumneko_lua",
+		"lua_ls",
 		"pyright",
 		"rust_analyzer",
 		"sqlls",
