@@ -65,8 +65,8 @@ keymap.set("n", "<leader>da", ":Telescope diagnostics<CR>")
 -- plugin: gitsigns
 keymap.set("n", "<leader>ga", ":Gitsigns toggle_deleted<CR>")
 keymap.set("n", "<leader>gs", ":Gitsigns diffthis<CR>")
-keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
-keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
+keymap.set("n", "<leader>[g", ":Gitsigns prev_hunk<CR>")
+keymap.set("n", "<leader>]g", ":Gitsigns next_hunk<CR>")
 
 -- plugin: vim-fugitive
 
