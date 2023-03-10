@@ -29,7 +29,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many other plugins use
 
 	-- colorscheme
-	--use("ntk148v/vim-horizon")
+	-- use("ntk148v/vim-horizon")
 	use("lunarvim/horizon.nvim")
 
 	-- transparent background
@@ -71,7 +71,11 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		-- commit = "133bf4b06f109da0cae9ab61a6dd8e29e62c90d3",
+	})
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 

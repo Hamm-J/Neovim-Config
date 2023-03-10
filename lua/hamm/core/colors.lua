@@ -2,6 +2,8 @@
 -- vim.cmd([[ hi PmenuSel guibg=#4B4C53 ctermbg=gray ]])
 vim.cmd([[ hi PmenuSel guibg=#214a63 ctermbg=gray ]])
 -- vim.cmd([[ hi Visual guibg=#1c1e26 ctermbg=gray ]]) -- change color of visul mode selection
+vim.cmd([[ hi ColorColumn guibg=#4B4C53 ]])
+
 -- change background color
 -- vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])
 -- vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])

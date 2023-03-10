@@ -23,9 +23,9 @@ lualine.setup({
 		},
 		lualine_x = {
 			"filename",
-			"filetype",
+			-- "filetype",
 			-- "fileformat",
-			"encoding",
+			-- "encoding",
 		},
 		lualine_y = { "progress" },
 		lualine_z = { "location" },

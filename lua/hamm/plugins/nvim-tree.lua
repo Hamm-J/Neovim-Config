@@ -9,6 +9,13 @@ vim.g.loaded_netrwPlugin = 1
 
 nvimtree.setup({
 	renderer = {
+		-- icons = {
+		-- 	show = {
+		-- 		file = false,
+		-- 		folder = false,
+		-- 		folder_arrow = false,
+		-- 	},
+		-- },
 		icons = {
 			glyphs = {
 				folder = {

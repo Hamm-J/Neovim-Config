@@ -42,6 +42,8 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- *** clipboard ***
 keymap.set("n", "x", '"_x') -- prevent x from filling up yank buffer
+keymap.set("n", "X", '"_x') -- prevent X from filling up yank buffer
+-- keymap.set("n", "D", '"_x') -- prevent X from filling up yank buffer
 
 -- *** debugger ***
 -- plugin: nvim-dap
