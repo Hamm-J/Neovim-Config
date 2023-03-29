@@ -51,6 +51,9 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 -- 	on_attach = on_attach,
 -- })
 
+-- LSP servers:
+-- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
+
 typescript.setup({
 	server = {
 		capabilities = capabilities,
@@ -94,6 +97,16 @@ lspconfig["jsonls"].setup({
 })
 
 lspconfig["svelte"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["docker_compose_language_service"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["volar"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

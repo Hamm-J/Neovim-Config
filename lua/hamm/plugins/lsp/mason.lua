@@ -15,6 +15,9 @@ end
 
 mason.setup()
 
+-- LSP servers:
+-- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
+
 mason_lspconfig.setup({
 	ensure_installed = {
 		"cssls",
@@ -27,6 +30,8 @@ mason_lspconfig.setup({
 		"sqlls",
 		"jsonls",
 		"svelte",
+		"volar",
+		"docker_compose_language_service",
 	},
 })
 
