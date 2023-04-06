@@ -3,7 +3,7 @@ if not status then
 	return
 end
 
-local lualine_horizon = require("lualine.themes.horizon")
+-- local lualine_horizon = require("lualine.themes.horizon")
 
 lualine.setup({
 	options = {
@@ -30,12 +30,14 @@ lualine.setup({
 			-- "encoding",
 		},
 	},
-	tabline = {
-		lualine_a = { "buffers" },
-		lualine_b = {},
-		lualine_c = {},
-		lualine_x = {},
-		lualine_y = { "" },
-		lualine_z = { "tabs" },
-	},
+	-- tabline = {
+	-- 	-- lualine_a = { "buffers" },
+	-- 	lualine_a = { "filename" },
+	-- 	lualine_b = {},
+	-- 	lualine_c = {},
+	-- 	lualine_x = {},
+	-- 	lualine_y = { "" },
+	-- 	-- lualine_z = { "tabs" },
+	-- 	lualine_z = {},
+	-- },
 })

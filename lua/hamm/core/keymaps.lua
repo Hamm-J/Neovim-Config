@@ -26,6 +26,7 @@ keymap.set("n", "<c-l>", ":wincmd l<CR>")
 keymap.set("n", "<Tab>", ":bnext<CR>")
 keymap.set("n", "<S-Tab>", ":bprevious<CR>")
 keymap.set("n", "<leader>sn", "<C-w>T")
+keymap.set("n", "<leader>bf", ":buffers<CR>")
 
 -- *** file explorer ***
 -- plugin: nvim-tree
