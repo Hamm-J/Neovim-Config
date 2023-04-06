@@ -47,7 +47,7 @@ dapui.setup({
 		{
 			elements = {
 				"repl",
-				"console",
+				--"console",
 			},
 			size = 0.25, -- 25% of total lines
 			position = "bottom",
@@ -55,7 +55,7 @@ dapui.setup({
 	},
 	controls = {
 		-- Requires Neovim nightly (or 0.8 when released)
-		enabled = true,
+		enabled = false,
 		-- Display controls in this element
 		element = "repl",
 		icons = {
