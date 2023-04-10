@@ -3,7 +3,7 @@ if not status then
 	return
 end
 
--- local lualine_horizon = require("lualine.themes.horizon")
+local lualine_horizon = require("lualine.themes.horizon")
 
 lualine.setup({
 	options = {

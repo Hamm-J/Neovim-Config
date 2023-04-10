@@ -63,6 +63,7 @@ keymap.set("n", "<leader>db", ':lua require("dapui").toggle()<CR>')
 
 -- *** lsp ***
 keymap.set("n", "<leader>da", ":Telescope diagnostics<CR>")
+-- keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 
 -- *** git ***
 -- plugin: gitsigns
