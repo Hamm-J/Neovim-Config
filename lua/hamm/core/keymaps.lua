@@ -30,7 +30,9 @@ keymap.set("n", "<leader>bf", ":buffers<CR>")
 
 -- *** file explorer ***
 -- plugin: nvim-tree
-keymap.set("n", "<c-b>", ":NvimTreeToggle<CR>")
+-- keymap.set("n", "<c-b>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<c-b>", ":E<CR>")
+-- keymap.set("n", "<c-B>", ":Lexplore<CR>")
 
 -- *** fuzzy search ***
 -- plugin: telescope
