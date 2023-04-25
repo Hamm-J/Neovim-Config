@@ -50,3 +50,4 @@ opt.iskeyword:append("-")
 -- netrw
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 40
+vim.g.netrw_bufsettings = "noma nomod nu nowrap ro nobl"
