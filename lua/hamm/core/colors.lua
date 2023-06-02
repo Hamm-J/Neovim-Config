@@ -16,7 +16,9 @@ vim.cmd([[ hi TelescopeSelectionCaret guibg=#1c1e26 ctermbg=gray ]])
 -- vim.cmd([[ hi lualine_a_buffers_inactive guifg=#4B4C53 ]])
 -- vim.cmd([[ hi lualine_a_buffers_active guifg=#c8ccd4 ]])
 
-vim.cmd([[ hi lualine_a_buffers_inactive guibg=#1d1f27 ]])
+-- vim.cmd([[ hi lualine_a_buffers_inactive guibg=#1d1f27 ]])
+vim.cmd([[ hi lualine_c_inactive guibg=#1d1f27 ]])
+vim.cmd([[ hi lualine_c_normal guibg=#1d1f27 ]])
 
 -- plugin: nvim-dap
 -- vim.api.nvim_set_hl(0, "DapBreakpoint", { ctermbg = 0, fg = "#993939", bg = "#31353f" })
