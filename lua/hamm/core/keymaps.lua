@@ -78,3 +78,27 @@ keymap.set("n", "]g", ":Gitsigns next_hunk<CR>")
 
 -- *** undotree ***
 keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
+
+-- *** cURL commands ***
+-- Inspired by: https://dev.to/22mahmoud/no-more-postman-just-use-curl-vim-2mha
+
+-- Set the keymap
+function RunShell()
+	vim.cmd("!sh %")
+end
+
+function RunShellOutput()
+	local lines = vim.fn.getline(1, "$")
+	local command = ""
+	for key, val in pairs(lines) do
+		command = command .. val
+	end
+	local output = vim.fn.systemlist(command)
+	vim.api.nvim_command("vertical new")
+	local buf = vim.api.nvim_get_current_buf()
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
+end
+
+-- Map the function to a custom key
+vim.api.nvim_set_keymap("n", "<leader>`", ":lua RunShell()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>~", ":lua RunShellOutput()<CR>", { noremap = true, silent = true })
