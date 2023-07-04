@@ -31,6 +31,7 @@ lsp.ensure_installed({
 	"svelte",
 	"docker_compose_language_service",
 	"volar",
+	"clangd",
 })
 
 require("lspconfig").dartls.setup({
