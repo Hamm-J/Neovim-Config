@@ -40,9 +40,6 @@ return packer.startup(function(use)
 	use("mbbill/undotree") -- visualize undos
 	use("mattn/emmet-vim") -- emmett for html boilerplate
 
-	-- explorer
-	use("nvim-tree/nvim-tree.lua") -- file explorer
-
 	-- status bar and tabline/winbar
 	use("nvim-lualine/lualine.nvim")
 

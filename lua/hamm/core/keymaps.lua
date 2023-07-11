@@ -8,10 +8,10 @@ keymap.set("i", "<S-tab>", "<C-d>")
 -- *** split windows ***
 
 -- adjust windows
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- equalize split window width
-keymap.set("n", "<leader>ss", ":close<CR>") -- close current split window
+-- keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+-- keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+-- keymap.set("n", "<leader>se", "<C-w>=") -- equalize split window width
+-- keymap.set("n", "<leader>ss", ":close<CR>") -- close current split window
 -- plugin: vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggles between max and original window size
 
