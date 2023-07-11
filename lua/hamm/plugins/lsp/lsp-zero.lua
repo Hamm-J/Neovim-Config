@@ -76,6 +76,9 @@ lsp.set_preferences({
 	},
 })
 
+-- Enable neovim API LSP support
+lsp.nvim_workspace()
+
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
