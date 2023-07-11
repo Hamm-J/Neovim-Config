@@ -33,7 +33,6 @@ return packer.startup(function(use)
 	use("lunarvim/horizon.nvim")
 
 	-- quality of life
-	use("szw/vim-maximizer") -- maximizes and restores current window dimensions
 	use("numToStr/Comment.nvim") -- commenting gc
 	use("kyazdani42/nvim-web-devicons") -- file explorer icons
 	use("norcalli/nvim-colorizer.lua") -- show color for color values
