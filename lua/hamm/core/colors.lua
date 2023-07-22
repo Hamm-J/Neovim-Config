@@ -20,6 +20,26 @@ vim.cmd([[ hi TelescopeSelectionCaret guibg=#1c1e26 ctermbg=gray ]])
 vim.cmd([[ hi lualine_c_inactive guibg=#1d1f27 ]])
 vim.cmd([[ hi lualine_c_normal guibg=#1d1f27 ]])
 
+-- plugin: fugitive
+-- Gdiff commands
+vim.cmd([[hi DiffAdd guibg=#1d1f27 guifg=green ]])
+vim.cmd([[hi DiffDelete guibg=#1d1f27 guifg=red ]])
+vim.cmd([[hi DiffChange guibg=#1d1f27 guifg=blue ]])
+vim.cmd([[hi DiffText guibg=#1d1f27 guifg=blue ]])
+-- Git diff commands
+vim.cmd([[hi diffAdded guibg=#1d1f27 guifg=green ]])
+vim.cmd([[hi diffremoved guibg=#1d1f27 guifg=red ]])
+vim.cmd([[hi diffChanged guibg=#1d1f27 guifg=blue ]])
+vim.cmd([[hi diffComment guibg=#1d1f27 guifg=blue ]])
+vim.cmd([[hi diffCommon guibg=#1d1f27 guifg=blue ]])
+-- Git diff commands header
+vim.cmd([[hi diffNewFile guibg=#1d1f27 guifg=white ]])
+vim.cmd([[hi diffOldFile guibg=#1d1f27 guifg=white ]])
+vim.cmd([[hi diffIndexLine guibg=#1d1f27 guifg=white ]])
+vim.cmd([[hi diffSubname guibg=#1d1f27 guifg=white ]])
+vim.cmd([[hi diffFile guibg=#1d1f27 guifg=white ]])
+vim.cmd([[hi diffLine guibg=#1d1f27 guifg=aqua ]])
+
 -- plugin: nvim-dap
 -- vim.api.nvim_set_hl(0, "DapBreakpoint", { ctermbg = 0, fg = "#993939", bg = "#31353f" })
 -- vim.api.nvim_set_hl(0, "DapLogPoint", { ctermbg = 0, fg = "#61afef", bg = "#31353f" })
