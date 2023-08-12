@@ -12,7 +12,7 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		diagnostics.eslint_d,
+		-- diagnostics.eslint_d,
 		formatting.gofumpt,
 	},
 	-- configure format on save
