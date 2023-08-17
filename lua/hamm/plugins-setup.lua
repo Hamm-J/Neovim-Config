@@ -34,7 +34,7 @@ return packer.startup(function(use)
 
 	-- quality of life
 	use("numToStr/Comment.nvim") -- commenting gc
-	use("kyazdani42/nvim-web-devicons") -- file explorer icons
+	-- use("kyazdani42/nvim-web-devicons") -- file explorer icons
 	use("norcalli/nvim-colorizer.lua") -- show color for color values
 	use("mbbill/undotree") -- visualize undos
 	use("mattn/emmet-vim") -- emmett for html boilerplate
