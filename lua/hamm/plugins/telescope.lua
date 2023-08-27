@@ -9,6 +9,19 @@ if not actions_setup then
 end
 
 telescope.setup({
+	pickers = {
+		find_files = {
+			-- hidden = true,
+			-- show dotfiles besides .git folder
+			find_command = {
+				"rg",
+				"--files",
+				"--hidden",
+				"-g",
+				"!.git",
+			},
+		},
+	},
 	defaults = {
 		mappings = {
 			i = {
@@ -18,7 +31,9 @@ telescope.setup({
 				["<c-d>"] = actions.delete_buffer,
 			},
 			n = {
-				["<c-d>"] = actions.delete_buffer,
+				["<C-d>"] = actions.delete_buffer,
+				["<S-j>"] = actions.cycle_history_next,
+				["<S-k>"] = actions.cycle_history_prev,
 			},
 		},
 	},
