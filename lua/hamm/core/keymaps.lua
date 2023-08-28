@@ -5,36 +5,39 @@ local keymap = vim.keymap
 -- *** typing ***
 keymap.set("i", "<S-tab>", "<C-d>")
 
--- *** split windows ***
+-- *** find and replace ***
+keymap.set("n", "<leader>rwu", "#``cgN")
+keymap.set("n", "<leader>rwd", "*``cgn")
 
--- adjust windows
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- equalize split window width
-keymap.set("n", "<leader>ss", ":close<CR>") -- close current split window
--- plugin: vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggles between max and original window size
+-- *** buffers ***
+-- close buffers/splits
+keymap.set("n", "<leader><c-w>", ":bd<CR>")
+keymap.set("n", "<leader>cs", ":close<CR>")
+keymap.set("n", "<leader>csb", ":bp<bar>sp<bar>bn<bar>bd<CR>") -- close split buffer, but not split
+keymap.set("n", "<leader>ca", ":%bd|e#<CR>")
 
--- navigate windows
+-- navigate splits
 keymap.set("n", "<c-k>", ":wincmd k<CR>")
 keymap.set("n", "<c-j>", ":wincmd j<CR>")
 keymap.set("n", "<c-h>", ":wincmd h<CR>")
 keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
--- *** tabs ***
--- navigate tabs
-keymap.set("n", "<Tab>", ":bnext<CR>")
-keymap.set("n", "<S-Tab>", ":bprevious<CR>")
+-- navigate buffers
+-- requires terminal configuration
+-- source: https://www.reddit.com/r/neovim/comments/uc6q8h/ability_to_map_ctrl_tab_and_more/
+keymap.set("n", "<C-Tab>", ":bnext<CR>")
+keymap.set("n", "<C-S-Tab>", ":bprevious<CR>")
 keymap.set("n", "<leader>sn", "<C-w>T")
 keymap.set("n", "<leader>bf", ":buffers<CR>")
 
 -- *** file explorer ***
--- plugin: nvim-tree
-keymap.set("n", "<c-b>", ":NvimTreeToggle<CR>")
+keymap.set("n", "<c-b>", ":Explore<CR>")
+keymap.set("n", "<leader><c-b>", ":Rex<CR>")
 
 -- *** fuzzy search ***
 -- plugin: telescope
-keymap.set("n", "<c-p>", "<cmd>Telescope find_files<cr>")
+keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
+keymap.set("n", "<leader><C-p>", "<cmd>Telescope resume<cr>")
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
@@ -63,15 +66,40 @@ keymap.set("n", "<leader>db", ':lua require("dapui").toggle()<CR>')
 
 -- *** lsp ***
 keymap.set("n", "<leader>da", ":Telescope diagnostics<CR>")
+-- keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 
 -- *** git ***
 -- plugin: gitsigns
 keymap.set("n", "<leader>ga", ":Gitsigns toggle_deleted<CR>")
 keymap.set("n", "<leader>gs", ":Gitsigns diffthis<CR>")
-keymap.set("n", "<leader>[g", ":Gitsigns prev_hunk<CR>")
-keymap.set("n", "<leader>]g", ":Gitsigns next_hunk<CR>")
+keymap.set("n", "[g", ":Gitsigns prev_hunk<CR>")
+keymap.set("n", "]g", ":Gitsigns next_hunk<CR>")
 
 -- plugin: vim-fugitive
 
 -- *** undotree ***
 keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
+
+-- *** cURL commands ***
+-- Inspired by: https://dev.to/22mahmoud/no-more-postman-just-use-curl-vim-2mha
+
+-- Set the keymap
+function RunShell()
+	vim.cmd("!sh %")
+end
+
+function RunShellOutput()
+	local lines = vim.fn.getline(1, "$")
+	local command = ""
+	for key, val in pairs(lines) do
+		command = command .. val
+	end
+	local output = vim.fn.systemlist(command)
+	vim.api.nvim_command("vertical new")
+	local buf = vim.api.nvim_get_current_buf()
+	vim.api.nvim_buf_set_lines(buf, 0, -1, false, output)
+end
+
+-- Map the function to a custom key
+vim.api.nvim_set_keymap("n", "<leader>`", ":lua RunShell()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>~", ":lua RunShellOutput()<CR>", { noremap = true, silent = true })

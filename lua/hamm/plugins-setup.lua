@@ -32,52 +32,49 @@ return packer.startup(function(use)
 	-- use("ntk148v/vim-horizon")
 	use("lunarvim/horizon.nvim")
 
-	-- transparent background
-	use("xiyaowong/nvim-transparent")
-
 	-- quality of life
-	use("szw/vim-maximizer") -- maximizes and restores current window dimensions
 	use("numToStr/Comment.nvim") -- commenting gc
-	use("kyazdani42/nvim-web-devicons") -- file explorer icons
+	-- use("kyazdani42/nvim-web-devicons") -- file explorer icons
 	use("norcalli/nvim-colorizer.lua") -- show color for color values
 	use("mbbill/undotree") -- visualize undos
-
-	-- explorer
-	use("nvim-tree/nvim-tree.lua") -- file explorer
+	use("mattn/emmet-vim") -- emmett for html boilerplate
 
 	-- status bar and tabline/winbar
-	use("nvim-lualine/lualine.nvim")
-	--use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
+	-- use("nvim-lualine/lualine.nvim")
 
 	-- fuzzy search
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
-	-- autocompletion
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-nvim-lua")
-	use("kristijanhusak/vim-dadbod-completion")
-	use("kristijanhusak/vim-dadbod-ui") -- sql database ui
-
-	-- snippets
-	use("L3MON4D3/LuaSnip")
-	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
-
 	-- LSP
-	use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
-	use("neovim/nvim-lspconfig")
-	use("hrsh7th/cmp-nvim-lsp")
 	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
-		-- commit = "133bf4b06f109da0cae9ab61a6dd8e29e62c90d3",
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
+				run = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-nvim-lua" },
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "rafamadriz/friendly-snippets" },
+		},
 	})
-	use("jose-elias-alvarez/typescript.nvim")
-	use("onsails/lspkind.nvim")
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim")
