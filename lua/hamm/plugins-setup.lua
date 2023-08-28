@@ -40,7 +40,7 @@ return packer.startup(function(use)
 	use("mattn/emmet-vim") -- emmett for html boilerplate
 
 	-- status bar and tabline/winbar
-	use("nvim-lualine/lualine.nvim")
+	-- use("nvim-lualine/lualine.nvim")
 
 	-- fuzzy search
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })

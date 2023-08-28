@@ -30,7 +30,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 --opt.guicursor = "n-v-c-i:block" -- make cursor a block in all modes
-opt.showmode = false
+opt.showmode = true
 --vim.cmd([[ hi BufferTabpageFill guibg=NONE ctermbg=NONE ]])
 --vim.cmd([[ hi PmenuSel guibg=#e95678 ctermbg=red ]])
 
