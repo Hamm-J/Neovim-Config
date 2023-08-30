@@ -11,7 +11,7 @@ keymap.set("n", "<leader>rwd", "*``cgn")
 
 -- *** buffers ***
 -- close buffers/splits
-keymap.set("n", "<leader><c-w>", ":bd<CR>")
+keymap.set("n", "<c-w>", ":bd<CR>")
 keymap.set("n", "<leader>cs", ":close<CR>")
 keymap.set("n", "<leader>csb", ":bp<bar>sp<bar>bn<bar>bd<CR>") -- close split buffer, but not split
 keymap.set("n", "<leader>ca", ":%bd|e#<CR>")
@@ -33,6 +33,10 @@ keymap.set("n", "<leader>bf", ":buffers<CR>")
 -- *** file explorer ***
 keymap.set("n", "<c-b>", ":Explore<CR>")
 keymap.set("n", "<leader><c-b>", ":Rex<CR>")
+
+-- *** jumplist ***
+keymap.set("n", "<leader>j", ":jumps<CR>")
+keymap.set("n", "<leader>cj", ":clearjumps<CR>")
 
 -- *** fuzzy search ***
 -- plugin: telescope

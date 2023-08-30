@@ -9,9 +9,11 @@ vim.cmd([[ hi ColorColumn guibg=#4B4C53 ]])
 
 -- plugin: telescope
 vim.cmd([[ hi TelescopeSelection guibg=#1c1e26 ctermbg=gray ]])
-vim.cmd([[ hi TelescopeSelectionCaret guibg=#1c1e26 ctermbg=gray ]])
+vim.cmd([[ hi TelescopeSelectionCaret guifg=#09f7a0 guibg=#1c1e26 ctermbg=gray ]])
 
-vim.cmd([[ hi StatusLine guibg=#1c1e26 ctermbg=gray guifg=#b877db ]])
+vim.cmd([[ hi ModeMsg guibg=#1c1e26 ctermbg=gray guifg=#e95678 ]])
+vim.cmd([[ hi MsgArea guibg=#1c1e26 ctermbg=gray guifg=#b877db ]])
+vim.cmd([[ hi StatusLine guibg=#1c1e26 ctermbg=gray guifg=#fab38e ]])
 -- plugin: lualine
 -- vim.cmd([[ hi lualine_a_buffers_inactive guifg=#4B4C53 ]])
 -- vim.cmd([[ hi lualine_a_buffers_active guifg=#c8ccd4 ]])
