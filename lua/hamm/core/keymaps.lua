@@ -11,7 +11,8 @@ keymap.set("n", "<leader>rwd", "*``cgn")
 
 -- *** buffers ***
 -- close buffers/splits
-keymap.set("n", "<c-w>", ":bd<CR>")
+keymap.set("n", "<leader>cb", ":bd<CR>")
+keymap.set("n", "<leader>x", ":bd<CR>")
 keymap.set("n", "<leader>cs", ":close<CR>")
 keymap.set("n", "<leader>csb", ":bp<bar>sp<bar>bn<bar>bd<CR>") -- close split buffer, but not split
 keymap.set("n", "<leader>ca", ":%bd|e#<CR>")
@@ -25,8 +26,10 @@ keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- navigate buffers
 -- requires terminal configuration
 -- source: https://www.reddit.com/r/neovim/comments/uc6q8h/ability_to_map_ctrl_tab_and_more/
-keymap.set("n", "<C-Tab>", ":bnext<CR>")
-keymap.set("n", "<C-S-Tab>", ":bprevious<CR>")
+keymap.set("n", "<Tab>", ":bnext<CR>")
+keymap.set("n", "<S-Tab>", ":bprevious<CR>")
+-- keymap.set("n", "<C-Tab>", ":bnext<CR>")
+-- keymap.set("n", "<C-S-Tab>", ":bprevious<CR>")
 keymap.set("n", "<leader>sn", "<C-w>T")
 keymap.set("n", "<leader>bf", ":buffers<CR>")
 
@@ -74,12 +77,17 @@ keymap.set("n", "<leader>da", ":Telescope diagnostics<CR>")
 
 -- *** git ***
 -- plugin: gitsigns
-keymap.set("n", "<leader>ga", ":Gitsigns toggle_deleted<CR>")
-keymap.set("n", "<leader>gs", ":Gitsigns diffthis<CR>")
 keymap.set("n", "[g", ":Gitsigns prev_hunk<CR>")
 keymap.set("n", "]g", ":Gitsigns next_hunk<CR>")
 
 -- plugin: vim-fugitive
+keymap.set("n", "<leader>gs", ":Git status<cr>")
+keymap.set("n", "<leader>ga", ":Git add .<cr>")
+keymap.set("n", "<leader>gc", ":Git commit<cr>")
+keymap.set("n", "<leader>gca", ":Git commit --amend<cr>")
+keymap.set("n", "<leader>gd", ":Git diff<cr>")
+keymap.set("n", "<leader>gdh", ":Git diff head~1<cr>")
+keymap.set("n", "<leader>gl", ":Git log<cr>")
 
 -- *** undotree ***
 keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
