@@ -26,8 +26,8 @@ keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- navigate buffers
 -- requires terminal configuration
 -- source: https://www.reddit.com/r/neovim/comments/uc6q8h/ability_to_map_ctrl_tab_and_more/
-keymap.set("n", "<Tab>", ":bnext<CR>")
-keymap.set("n", "<S-Tab>", ":bprevious<CR>")
+keymap.set("n", "<C-Tab>", ":bnext<CR>")
+keymap.set("n", "<C-S-Tab>", ":bprevious<CR>")
 -- keymap.set("n", "<C-Tab>", ":bnext<CR>")
 -- keymap.set("n", "<C-S-Tab>", ":bprevious<CR>")
 keymap.set("n", "<leader>sn", "<C-w>T")
