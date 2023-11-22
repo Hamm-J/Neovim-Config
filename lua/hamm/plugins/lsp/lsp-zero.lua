@@ -35,9 +35,12 @@ lsp.ensure_installed({
 	"omnisharp",
 })
 
-require("lspconfig").dartls.setup({
-	cmd = { "dart", "language-server", "--protocol=lsp" },
-})
+-- flutter-tools handles the dart lsp
+-- https://github.com/akinsho/flutter-tools.nvim#warning
+-- https://www.reddit.com/r/neovim/comments/uj5qfg/lsp_suggestion_list_shows_everything_twice_when/
+-- require("lspconfig").dartls.setup({
+-- 	cmd = { "dart", "language-server", "--protocol=lsp" },
+-- })
 
 -- Fix Undefined global 'vim'
 lsp.configure("lua_ls", {
