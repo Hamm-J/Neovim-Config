@@ -30,7 +30,12 @@ return packer.startup(function(use)
 
 	-- colorscheme
 	-- use("ntk148v/vim-horizon")
-	use("lunarvim/horizon.nvim")
+	-- use("lunarvim/horizon.nvim")
+	use("catppuccin/nvim")
+	-- use("rose-pine/neovim")
+	-- use("rebelot/kanagawa.nvim")
+	-- use("sainnhe/gruvbox-material")
+	-- use("loctvl842/monokai-pro.nvim")
 
 	-- quality of life
 	use("numToStr/Comment.nvim") -- commenting gc

@@ -1,26 +1,26 @@
 -- vim.cmd([[ hi PmenuSel guibg=#1c1e26 ctermbg=gray ]])
 -- vim.cmd([[ hi PmenuSel guibg=#4B4C53 ctermbg=gray ]])
-vim.cmd([[ hi PmenuSel guibg=#214a63 ctermbg=gray ]])
+-- vim.cmd([[ hi PmenuSel guibg=#214a63 ctermbg=gray ]])
 -- vim.cmd([[ hi Visual guibg=#1c1e26 ctermbg=gray ]]) -- change color of visul mode selection
-vim.cmd([[ hi ColorColumn guibg=#4B4C53 ]])
+-- vim.cmd([[ hi ColorColumn guibg=#4B4C53 ]])
 
 -- change background color
 -- vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]]) vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])
 
 -- plugin: telescope
-vim.cmd([[ hi TelescopeSelection guibg=#1d1f27 ctermbg=gray ]])
-vim.cmd([[ hi TelescopeSelectionCaret guifg=#09f7a0 guibg=#1d1f27 ctermbg=gray ]])
+-- vim.cmd([[ hi TelescopeSelection guibg=#1d1f27 ctermbg=gray ]])
+-- vim.cmd([[ hi TelescopeSelectionCaret guifg=#09f7a0 guibg=#1d1f27 ctermbg=gray ]])
 
-vim.cmd([[ hi modemsg guibg=#1d1f27 ctermbg=gray guifg=#e95678 ]])
-vim.cmd([[ hi msgarea guibg=#1d1f27 ctermbg=gray guifg=#b877db ]])
-vim.cmd([[ hi statusline guibg=#1d1f27 ctermbg=gray guifg=#fab38e ]])
+-- vim.cmd([[ hi modemsg guibg=#1d1f27 ctermbg=gray guifg=#e95678 ]])
+-- vim.cmd([[ hi msgarea guibg=#1d1f27 ctermbg=gray guifg=#b877db ]])
+-- vim.cmd([[ hi statusline guibg=#1d1f27 ctermbg=gray guifg=#fab38e ]])
 -- plugin: lualine
 -- vim.cmd([[ hi lualine_a_buffers_inactive guifg=#4B4C53 ]])
 -- vim.cmd([[ hi lualine_a_buffers_active guifg=#c8ccd4 ]])
 
 -- vim.cmd([[ hi lualine_a_buffers_inactive guibg=#1d1f27 ]])
-vim.cmd([[ hi lualine_c_inactive guibg=#1d1f27 ]])
-vim.cmd([[ hi lualine_c_normal guibg=#1d1f27 ]])
+-- vim.cmd([[ hi lualine_c_inactive guibg=#1d1f27 ]])
+-- vim.cmd([[ hi lualine_c_normal guibg=#1d1f27 ]])
 
 -- plugin: fugitive
 -- Gdiff commands
