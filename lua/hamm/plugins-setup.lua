@@ -90,6 +90,10 @@ return packer.startup(function(use)
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
+		-- dart treesitter is slow
+		-- https://www.reddit.com/r/nvim/comments/147u8ln/nvim_lags_when_a_dart_file_is_opened/
+		-- https://github.com/nvim-treesitter/nvim-treesitter/issues/4945
+		commit = "33eb472b459f1d2bf49e16154726743ab3ca1c6d",
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()

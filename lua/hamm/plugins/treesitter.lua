@@ -10,9 +10,9 @@ treesitter.setup({
 	indent = {
 		enable = true,
 	},
-	ensure_installed = {
-		"*",
-	},
+	-- ensure_installed = {
+	-- 	"*",
+	-- },
 	-- ensure_installed = {
 	-- 	"javascript",
 	-- 	"typescript",
