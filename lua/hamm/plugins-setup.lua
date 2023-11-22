@@ -82,6 +82,15 @@ return packer.startup(function(use)
 		},
 	})
 
+	-- flutter
+	use({
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+	})
+
 	-- formatting & linting
 	-- use("jose-elias-alvarez/null-ls.nvim")
 	use("nvimtools/none-ls.nvim")
