@@ -3,4 +3,11 @@ if not status then
 	return
 end
 
-flutter_tools.setup()
+flutter_tools.setup({
+    lsp = {
+        color = {
+            enabled = true,
+            background = false 
+        }
+    }
+})
