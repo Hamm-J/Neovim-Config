@@ -1,11 +1,23 @@
--- vim.cmd([[ hi PmenuSel guibg=#1c1e26 ctermbg=gray ]])
+-- vim.cmd([[ hi PmenuSel guibg=#000 ctermbg=gray ]])
 -- vim.cmd([[ hi PmenuSel guibg=#4B4C53 ctermbg=gray ]])
 -- vim.cmd([[ hi PmenuSel guibg=#214a63 ctermbg=gray ]])
 -- vim.cmd([[ hi Visual guibg=#1c1e26 ctermbg=gray ]]) -- change color of visul mode selection
 -- vim.cmd([[ hi ColorColumn guibg=#4B4C53 ]])
+vim.cmd([[ hi TelescopeSelection guibg=#1d1f27 ctermbg=gray ]])
 
--- change background color
--- vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]]) vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])
+-- Make transparent
+vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])
+vim.cmd([[ hi Normal guibg=none ctermbg=gray ]])
+vim.cmd([[ hi NormalNC guibg=none ctermbg=gray ]])        -- non-focused split pane
+vim.cmd([[ hi NormalFloat guibg=none ctermbg=gray ]])     -- hover
+vim.cmd([[ hi FloatBorder guibg=none ctermbg=gray ]])     -- hover
+vim.cmd([[ hi TelescopeNormal guibg=none ctermbg=gray ]]) -- Telescope background
+vim.cmd([[ hi SignColumn guibg=none ]])
+vim.cmd([[ hi LineNr guibg=none ]])
+vim.cmd([[ hi StatusLine guibg=none ]])
+vim.cmd([[ hi Pmenu guibg=none ctermbg=gray ]])
+-- vim.cmd([[ hi MyNormal guibg=none ctermbg=gray ]]) -- not needed
+-- vim.cmd([[ hi MyNormalNC guibg=none ctermbg=gray ]]) -- not needed
 
 -- plugin: telescope
 -- vim.cmd([[ hi TelescopeSelection guibg=#1d1f27 ctermbg=gray ]])
@@ -51,20 +63,20 @@ vim.api.nvim_set_hl(0, "DapLogPoint", { ctermbg = 0, fg = "", bg = "#31353f" })
 vim.api.nvim_set_hl(0, "DapStopped", { ctermbg = 0, fg = "", bg = "#31353f" })
 
 vim.fn.sign_define(
-	"DapBreakpoint",
-	{ text = "", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+    "DapBreakpoint",
+    { text = "", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 )
 vim.fn.sign_define(
-	"DapBreakpointCondition",
-	{ text = "ﳁ", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+    "DapBreakpointCondition",
+    { text = "ﳁ", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 )
 vim.fn.sign_define(
-	"DapBreakpointRejected",
-	{ text = "", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+    "DapBreakpointRejected",
+    { text = "", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 )
 vim.fn.sign_define(
-	"DapLogPoint",
-	{ text = "", texthl = "DapLogPoint", linehl = "DapLogPoint", numhl = "DapLogPoint" }
+    "DapLogPoint",
+    { text = "", texthl = "DapLogPoint", linehl = "DapLogPoint", numhl = "DapLogPoint" }
 )
 vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStopped", numhl = "DapStopped" })
 -- vim.api.nvim_set_hl(0, "blue", { fg = "#3d59a1" })

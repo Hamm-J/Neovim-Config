@@ -15,7 +15,7 @@ keymap.set("n", "<leader>cb", ":bd<CR>")
 keymap.set("n", "<leader>x", ":bd<CR>")
 keymap.set("n", "<leader>cs", ":close<CR>")
 keymap.set("n", "<leader>csb", ":bp<bar>sp<bar>bn<bar>bd<CR>") -- close split buffer, but not split
-keymap.set("n", "<leader>ca", ":%bd|e#<CR>")
+keymap.set("n", "<leader>co", ":%bd|e#<CR>")
 
 -- navigate splits
 keymap.set("n", "<c-k>", ":wincmd k<CR>")
