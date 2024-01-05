@@ -12,7 +12,8 @@ keymap.set("n", "<leader>rwd", "*``cgn")
 -- *** buffers ***
 -- close buffers/splits
 keymap.set("n", "<leader>cb", ":bd<CR>")
-keymap.set("n", "<leader>x", ":bd<CR>")
+keymap.set("n", "<c-Q>", ":bd<CR>")
+-- keymap.set("n", "<leader>x", ":bd<CR>")
 keymap.set("n", "<leader>cs", ":close<CR>")
 keymap.set("n", "<leader>csb", ":bp<bar>sp<bar>bn<bar>bd<CR>") -- close split buffer, but not split
 keymap.set("n", "<leader>co", ":%bd|e#<CR>")
@@ -39,6 +40,7 @@ keymap.set("n", "<leader><c-b>", ":Rex<CR>")
 
 -- *** jumplist ***
 keymap.set("n", "<leader>j", ":jumps<CR>")
+keymap.set("n", "<leader><S-j>", ":Telescope jumplist<CR>")
 keymap.set("n", "<leader>cj", ":clearjumps<CR>")
 
 -- *** fuzzy search ***
@@ -47,7 +49,8 @@ keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>")
 keymap.set("n", "<leader><C-p>", "<cmd>Telescope resume<cr>")
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+-- keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+keymap.set("n", "<c-n>", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
