@@ -20,19 +20,19 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-	"tsserver",
-	"rust_analyzer",
-	"gopls",
-	"cssls",
-	"lua_ls",
-	"pyright",
-	"sqlls",
-	"jsonls",
-	"svelte",
-	"docker_compose_language_service",
-	"volar",
-	"clangd",
-	"omnisharp",
+	-- "tsserver",
+	-- "rust_analyzer",
+	-- "gopls",
+	-- "cssls",
+	-- "lua_ls",
+	-- "pyright",
+	-- "sqlls",
+	-- "jsonls",
+	-- "svelte",
+	-- "docker_compose_language_service",
+	-- "volar",
+	-- "clangd",
+	-- "omnisharp",
 })
 
 -- flutter-tools handles the dart lsp
