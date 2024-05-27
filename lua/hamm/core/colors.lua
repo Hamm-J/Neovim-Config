@@ -4,18 +4,19 @@
 -- vim.cmd([[ hi Visual guibg=#1c1e26 ctermbg=gray ]]) -- change color of visul mode selection
 -- vim.cmd([[ hi ColorColumn guibg=#4B4C53 ]])
 vim.cmd([[ hi TelescopeSelection guibg=#1d1f27 ctermbg=gray ]])
+-- vim.cmd([[ highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE ]])
 
 -- Make transparent
-vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])
-vim.cmd([[ hi Normal guibg=none ctermbg=gray ]])
-vim.cmd([[ hi NormalNC guibg=none ctermbg=gray ]])        -- non-focused split pane
-vim.cmd([[ hi NormalFloat guibg=none ctermbg=gray ]])     -- hover
-vim.cmd([[ hi FloatBorder guibg=none ctermbg=gray ]])     -- hover
-vim.cmd([[ hi TelescopeNormal guibg=none ctermbg=gray ]]) -- Telescope background
-vim.cmd([[ hi SignColumn guibg=none ]])
-vim.cmd([[ hi LineNr guibg=none ]])
-vim.cmd([[ hi StatusLine guibg=none ]])
-vim.cmd([[ hi Pmenu guibg=none ctermbg=gray ]])
+-- vim.cmd([[ hi Normal guibg=#080808 ctermbg=gray ]])
+-- vim.cmd([[ hi Normal guibg=none ctermbg=gray ]])
+-- vim.cmd([[ hi NormalNC guibg=none ctermbg=gray ]])        -- non-focused split pane
+-- vim.cmd([[ hi NormalFloat guibg=none ctermbg=gray ]])     -- hover
+-- vim.cmd([[ hi FloatBorder guibg=none ctermbg=gray ]])     -- hover
+-- vim.cmd([[ hi TelescopeNormal guibg=none ctermbg=gray ]]) -- Telescope background
+-- vim.cmd([[ hi SignColumn guibg=none ]])
+-- vim.cmd([[ hi LineNr guibg=none ]])
+-- vim.cmd([[ hi StatusLine guibg=none ]])
+-- vim.cmd([[ hi Pmenu guibg=none ctermbg=gray ]])
 -- vim.cmd([[ hi MyNormal guibg=none ctermbg=gray ]]) -- not needed
 -- vim.cmd([[ hi MyNormalNC guibg=none ctermbg=gray ]]) -- not needed
 
@@ -31,8 +32,10 @@ vim.cmd([[ hi Pmenu guibg=none ctermbg=gray ]])
 -- vim.cmd([[ hi lualine_a_buffers_active guifg=#c8ccd4 ]])
 
 -- vim.cmd([[ hi lualine_a_buffers_inactive guibg=#1d1f27 ]])
+-- vim.cmd([[ hi lualine_z_tabs_inactive guibg=#1d1f27 ]])
 -- vim.cmd([[ hi lualine_c_inactive guibg=#1d1f27 ]])
 -- vim.cmd([[ hi lualine_c_normal guibg=#1d1f27 ]])
+-- vim.cmd([[ hi CursorLine guibg=#1d1f27 ]])
 
 -- plugin: fugitive
 -- Gdiff commands

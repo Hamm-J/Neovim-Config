@@ -15,7 +15,7 @@ flutter_tools.setup({
         enabled = true,
     },
     widget_guides = {
-        enabled = true,
+        enabled = false,
     },
     settings = {
         showTodos = false,

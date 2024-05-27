@@ -29,72 +29,102 @@ return packer.startup(function(use)
     use("nvim-lua/plenary.nvim") -- lua functions that many other plugins use
 
     -- colorschemes
-    use("ntk148v/vim-horizon")
-    use("lunarvim/horizon.nvim")
-    use("catppuccin/nvim")
-    use("folke/tokyonight.nvim")
-    use("rose-pine/neovim")
-    use("rebelot/kanagawa.nvim")
-    use("nyoom-engineering/oxocarbon.nvim")
-    use("loctvl842/monokai-pro.nvim")
-    use("joshdick/onedark.vim")
-    use("olimorris/onedarkpro.nvim")
+    -- use("ntk148v/vim-horizon")
+    -- use("Tsuzat/NeoSolarized.nvim")
+    -- use("lunarvim/horizon.nvim")
+    -- use("catppuccin/nvim")
+    -- use("folke/tokyonight.nvim")
+    -- use("rose-pine/neovim")
+    -- use("rebelot/kanagawa.nvim")
+    -- use("nyoom-engineering/oxocarbon.nvim")
+    -- use("loctvl842/monokai-pro.nvim")
+    -- use("joshdick/onedark.vim")
+    -- use("olimorris/onedarkpro.nvim")
+    -- use("ellisonleao/gruvbox.nvim")
     use("sainnhe/gruvbox-material")
-    use("ayu-theme/ayu-vim")
+    -- use("ayu-theme/ayu-vim")
+    -- use("jacoborus/tender.vim")
+    -- use("savq/melange-nvim")
+    -- use({
+    --     "mcchrish/zenbones.nvim",
+    --     requires = "rktjmp/lush.nvim",
+    -- })
+    -- use("AlexvZyl/nordic.nvim")
+    -- use("projekt0n/github-nvim-theme")
 
     -- quality of life
     use("numToStr/Comment.nvim")    -- commenting gc
     -- use("kyazdani42/nvim-web-devicons") -- file explorer icons
-    use("norcalli/nvim-colorizer.lua") -- show color for color values
     use("mbbill/undotree")          -- visualize undos
-    use("mattn/emmet-vim")          -- emmett for html boilerplate
+    -- keep dapui frame size proportional to terminal window size
+    use("kwkarlwang/bufresize.nvim")
+    use("tiagovla/scope.nvim")
 
     -- status bar and tabline/winbar
-    -- use("nvim-lualine/lualine.nvim")
+    use("nvim-lualine/lualine.nvim")
+    -- use("romgrk/barbar.nvim")
+    use("stevearc/oil.nvim")
 
     -- fuzzy search
     use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
     use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
     -- LSP
-    use({
-        "VonHeikemen/lsp-zero.nvim",
-        branch = "v2.x",
-        requires = {
-            -- LSP Support
-            { "neovim/nvim-lspconfig" }, -- Required
-            {                   -- Optional
-                "williamboman/mason.nvim",
-                run = function()
-                    pcall(vim.cmd, "MasonUpdate")
-                end,
-            },
-            { "williamboman/mason-lspconfig.nvim" }, -- Optional
-
-            -- Autocompletion
-            { "hrsh7th/nvim-cmp" }, -- Required
-            { "hrsh7th/cmp-buffer" },
-            { "hrsh7th/cmp-path" },
-            { "hrsh7th/cmp-nvim-lua" },
-            { "hrsh7th/cmp-nvim-lsp" }, -- Required
-            { "L3MON4D3/LuaSnip" }, -- Required
-
-            -- Snippets
-            { "L3MON4D3/LuaSnip" },
-            { "saadparwaiz1/cmp_luasnip" },
-            { "rafamadriz/friendly-snippets" },
-            { "Hoffs/omnisharp-extended-lsp.nvim" },
-        },
+    use({ "neovim/nvim-lspconfig" }) -- Required
+    use({                         -- Optional
+        "williamboman/mason.nvim",
+        run = function()
+            pcall(vim.cmd, "MasonUpdate")
+        end,
     })
+    use({ "williamboman/mason-lspconfig.nvim" }) -- Optional
+
+    -- Autocompletion
+    use({
+        "hrsh7th/nvim-cmp",
+        requires = {
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lua",
+            "hrsh7th/cmp-nvim-lsp",
+            "rafamadriz/friendly-snippets",
+        },
+    }) -- Required
+
+    -- neovim config development
+    use("folke/neodev.nvim")
 
     -- flutter
+    -- use({
+    --     "akinsho/flutter-tools.nvim",
+    --     requires = {
+    --         "nvim-lua/plenary.nvim",
+    --         "stevearc/dressing.nvim", -- optional for vim.ui.select
+    --     },
+    -- })
+
+    -- elixir
+    -- use({
+    --     "elixir-tools/elixir-tools.nvim",
+    --     tag = "stable",
+    --     requires = { "nvim-lua/plenary.nvim" },
+    -- })
+
+    -- c#
+    use({ "Hoffs/omnisharp-extended-lsp.nvim" })
+
+    -- sql
+    use({ "tpope/vim-dadbod" })
+
     use({
-        "akinsho/flutter-tools.nvim",
+        "kristijanhusak/vim-dadbod-ui",
         requires = {
-            "nvim-lua/plenary.nvim",
-            "stevearc/dressing.nvim", -- optional for vim.ui.select
+            "tpope/vim-dadbod",
+            "kristijanhusak/vim-dadbod-completion",
         },
-    })
+    }) -- Required
 
     -- formatting & linting
     -- use("jose-elias-alvarez/null-ls.nvim")
@@ -107,7 +137,7 @@ return packer.startup(function(use)
         -- dart treesitter is slow
         -- https://www.reddit.com/r/nvim/comments/147u8ln/nvim_lags_when_a_dart_file_is_opened/
         -- https://github.com/nvim-treesitter/nvim-treesitter/issues/4945
-        commit = "33eb472b459f1d2bf49e16154726743ab3ca1c6d",
+        -- commit = "33eb472b459f1d2bf49e16154726743ab3ca1c6d",
         run = function()
             local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
             ts_update()
@@ -120,7 +150,13 @@ return packer.startup(function(use)
 
     -- debugger
     use("mfussenegger/nvim-dap")
-    use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+    use({
+        "rcarriga/nvim-dap-ui",
+        requires = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio",
+        },
+    })
     use("theHamsta/nvim-dap-virtual-text") -- show debug values next to line in code
     use("leoluz/nvim-dap-go")           -- golang
     use("mfussenegger/nvim-dap-python") -- python

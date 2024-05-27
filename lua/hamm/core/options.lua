@@ -22,7 +22,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- cursor line
-opt.cursorline = false
+opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
@@ -40,7 +40,7 @@ opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
 
 -- split windows
--- opt.splitright = true
+opt.splitright = true
 opt.splitbelow = true
 
 -- word units

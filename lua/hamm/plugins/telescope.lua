@@ -40,6 +40,12 @@ telescope.setup({
         help_tags = {
             initial_mode = "normal",
         },
+        diagnostics = {
+            initial_mode = "normal",
+        },
+        jumplist = {
+            initial_mode = "normal",
+        },
 	},
 	defaults = {
 		mappings = {
