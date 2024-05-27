@@ -14,6 +14,7 @@ require("hamm.plugins.gitsigns")
 require("hamm.plugins.scope")
 require("hamm.plugins.oil")
 require("hamm.plugins.bufresize")
+require("hamm.plugins.colorizer")
 -- dap
 require("hamm.plugins.dap.nvim-dap-ui")
 -- require("hamm.plugins.dap.nvim-dap-virtual-text")

@@ -53,12 +53,13 @@ return packer.startup(function(use)
     -- use("projekt0n/github-nvim-theme")
 
     -- quality of life
-    use("numToStr/Comment.nvim")    -- commenting gc
+    use("numToStr/Comment.nvim") -- commenting gc
     -- use("kyazdani42/nvim-web-devicons") -- file explorer icons
-    use("mbbill/undotree")          -- visualize undos
+    use("mbbill/undotree")    -- visualize undos
     -- keep dapui frame size proportional to terminal window size
     use("kwkarlwang/bufresize.nvim")
     use("tiagovla/scope.nvim")
+    use("NvChad/nvim-colorizer.lua")
 
     -- status bar and tabline/winbar
     use("nvim-lualine/lualine.nvim")
